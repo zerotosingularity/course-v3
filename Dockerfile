@@ -22,18 +22,6 @@ RUN apt-get update --fix-missing && apt-get install -y \
 	wget \
 && rm -rf /var/lib/apt/lists/*
 
-# Anaconda
-# RUN apt-get update --fix-missing && apt-get install -y \
-# 	libglib2.0-0 \
-# 	libsm6 \
-# 	libxext6 \
-# 	libxrender1
-
-#RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-#	wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && \
-#	/bin/bash ~/anaconda.sh -b -p /opt/conda && \
-#	rm ~/anaconda.sh
-
 RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
     rm ~/anaconda.sh && \
